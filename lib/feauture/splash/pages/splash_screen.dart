@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:untitled3/feauture/layout_view.dart';
+import 'package:untitled3/feauture/login/page/login_view.dart';
 
 class SplashView extends StatefulWidget {
   static const String routName = "/";
@@ -20,7 +20,7 @@ class _SplashViewState extends State<SplashView> {
       () {
         Navigator.pushReplacementNamed(
           context,
-          layout_view.routName,
+          login_view.routName,
         );
       },
     );
