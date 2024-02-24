@@ -1,14 +1,21 @@
-import 'package:flutter/cupertino.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:untitled3/feauture/register/pages/register_view.dart';
+import 'package:untitled3/firebase_options.dart';
 
-import 'config/constant/application_theme_manager.dart';
+import 'core/config/constant/application_theme_manager.dart';
 import 'feauture/layout_view.dart';
+import 'feauture/login/page/login_view.dart';
 import 'feauture/setting_provider.dart';
 import 'feauture/splash/pages/splash_screen.dart';
 import 'feauture/tasks/pages/task_view.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(ChangeNotifierProvider(
       create: (context) => setting_provider(), child: Myapp()));
 }
@@ -23,11 +30,13 @@ class Myapp extends StatelessWidget {
       theme: ApplicationThemeManager.lightTheme,
       darkTheme: ApplicationThemeManager.darkTheme,
       themeMode: vm.currentTheme,
-      initialRoute: SplashView.routName,
+      initialRoute: SplashView.routeName,
       routes: {
-        SplashView.routName: (context) => const SplashView(),
-        task_view.routName: (context) => task_view(),
-        layout_view.routName: (context) => const layout_view(),
+        SplashView.routeName: (context) => const SplashView(),
+        task_view.routeName: (context) => task_view(),
+        layout_view.routeName: (context) => const layout_view(),
+        register_view.routeName: (context) => register_view(),
+        login_view.routeName: (context) => login_view()
       },
     );
   }

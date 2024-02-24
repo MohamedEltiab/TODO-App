@@ -1,10 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:untitled3/feauture/layout_view.dart';
+import 'package:untitled3/feauture/login/page/login_view.dart';
 
 class SplashView extends StatefulWidget {
-  static const String routName = "/";
+  static const String routeName = "/";
 
   const SplashView({super.key});
 
@@ -16,11 +16,11 @@ class _SplashViewState extends State<SplashView> {
   @override
   void initState() {
     Timer(
-      const Duration(seconds: 6),
+      const Duration(seconds: 2),
       () {
         Navigator.pushReplacementNamed(
           context,
-          layout_view.routName,
+          login_view.routeName,
         );
       },
     );

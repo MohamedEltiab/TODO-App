@@ -1,10 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:untitled3/feauture/setting_provider.dart';
 
 class layout_view extends StatefulWidget {
-  static const String routName = "layout_view";
+  static const String routeName = "layout_view";
 
   const layout_view({super.key});
 
@@ -20,6 +19,7 @@ class _layout_viewState extends State<layout_view> {
     var theme = Theme.of(context);
     var vm = Provider.of<setting_provider>(context);
     return Scaffold(
+      appBar: AppBar(),
       extendBody: true,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(

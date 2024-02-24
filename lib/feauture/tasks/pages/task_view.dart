@@ -1,5 +1,4 @@
 import 'package:easy_date_timeline/easy_date_timeline.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:untitled3/feauture/tasks/widget/task_item_view.dart';
@@ -7,7 +6,7 @@ import 'package:untitled3/feauture/tasks/widget/task_item_view.dart';
 import '../../setting_provider.dart';
 
 class task_view extends StatefulWidget {
-  static const String routName = "task_view";
+  static const String routeName = "task_view";
 
   task_view({super.key});
 

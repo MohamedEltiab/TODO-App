@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 class ApplicationThemeManager {
@@ -7,6 +5,8 @@ class ApplicationThemeManager {
   static ThemeData lightTheme = ThemeData(
     primaryColor: primaryColor,
     scaffoldBackgroundColor: Color(0xFFDFECDB),
+    appBarTheme:
+        AppBarTheme(iconTheme: IconThemeData(color: Color(0xFF060E1E))),
     bottomAppBarTheme: BottomAppBarTheme(
       color: Colors.white,
       padding: EdgeInsets.zero,
